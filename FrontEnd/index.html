@@ -7,19 +7,29 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6f1b8d68c1.js" crossorigin="anonymous"></script>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
-	<script src="test.js" defer></script> 
+
 
 </head>
 <body>
+	<section id="admin-logged">
+		<div id="logo-edition">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<p class="modify-a">Mode édition</p>
+		</div>
+		<button type="button">publier les changements</button>
+	</section>
+	
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
+			<a href="index.html">projets</a>
+			<a href="index.html#contact">contact</a>
+			<a href="login.html" id="login">login</a>
+			<a href="index.html" id="logout">logout</a>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -28,6 +38,10 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
+			<div id="figure-modify">
+			    <i class="fa-regular fa-pen-to-square"></i>
+			    <a href="#" class="modify-a">modifier</a>
+		    </div>
 		</figure>
 		<article>
 			<h2>Designer d'espace</h2>
@@ -37,12 +51,11 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="filters">
-			<button type="button" id="btnTous" class="bouton-css selected" autofocus>Tous</button>
-			<button type="button" id="btnObjet" class="bouton-css">Objets</button>
-			<button type="button" id="btnAppartement" class="bouton-css">Appartements</button>
-			<button type="button" id="btnHotelRestaurant" class="bouton-css">Hôtels & restaurants</button>
+		<div id="portfolio-modify">
+			<div id="portfolio-l-modify">
+		        <i class="fa-regular fa-pen-to-square"></i>
+			    <a href="#">modifier</a>
+			</div>
 		</div>
 		<div class="gallery">
 		</div>
@@ -69,5 +82,6 @@
 		</ul>
 	</nav>
 </footer>
+<script src="test.js"></script> 
 </body>
 </html>
