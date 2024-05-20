@@ -1,6 +1,7 @@
 const imagesContainer = document.querySelector('.gallery');
 
 function createGallery(works) {
+    imagesContainer.innerHTML=''
     works.forEach((work) => {
         const figure = document.createElement('figure');
         const figureCaption = document.createElement('figcaption');
@@ -18,6 +19,7 @@ function createGallery(works) {
 fetch('http://localhost:5678/api/works')
     .then(response => response.json())
     .then(data => {
+        createGallery(data)
         fetch('http://localhost:5678/api/categories')
             .then(response => response.json())
             .then(categories => {
@@ -36,8 +38,9 @@ fetch('http://localhost:5678/api/works')
                 const categoryBtns = document.querySelectorAll('.category');
                 categoryBtns.forEach(btn => {
                     btn.addEventListener('click', (event) => {
-                        const categoryId = parseInt(event.target.getAttribute('data-id'));
-                        const worksByCategory = data.filter(work => work.categoryId === categoryId);
+                        const categoryId = btn.dataset.id
+                        console.log(btn.dataset.id)
+                        const worksByCategory = data.filter(work => work.categoryId == categoryId);
                         createGallery(worksByCategory);
                     });
                 });
