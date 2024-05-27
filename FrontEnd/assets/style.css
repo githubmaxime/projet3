@@ -347,3 +347,114 @@ body{
 	margin-left: 30px;
 	font-size: 1.2em;
 }
+
+/*Modal*/
+
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+
+  }
+
+  #modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 650px;
+	text-align: center;
+	position: relative;
+	max-height: 660px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  #modal-content h2{
+	color: black;
+	margin-top: 20px;
+	font-weight: lighter;
+  }
+
+
+  #modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+  }
+
+  #modal-close i {
+	font-size: 1.3em;
+	display: block;
+  }
+
+  .gallery-modal {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 10px;
+	margin: 40px 80px 0px 80px;
+	padding-bottom: 30px;
+	border-bottom: solid 2px #d0d0d0;
+  }
+
+  .gallery-modal img {
+	max-width: 100%;
+	height: auto;
+  }
+
+  #new-photo{
+	font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #1D6154;
+    padding: 10px 25px 10px 25px;
+    width: 230px;
+    text-align: center;
+    border-radius: 60px;
+    margin-top: 30px;
+	cursor: pointer;
+  }
+
+  #delete-gallery {
+	color: #e03232; 
+	background-color: transparent; 
+	border: none; 
+	padding: 0; 
+	font-size: inherit; 
+	font-family: inherit; 
+	cursor: pointer; 
+	margin-top: 20px;
+  }
+
+  .gallery-modal figure {
+    position: relative;
+}
+
+.gallery-modal figure i {
+    position: absolute;
+    color: white;
+    top: 3px;
+    right: 3px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding: 4px;
+    background-color: black;
+    border: none;
+	border-radius: 5px;
+}
