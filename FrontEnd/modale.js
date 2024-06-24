@@ -198,8 +198,6 @@ function addNewWork(event) {
   formData.append("title", title);
   formData.append("category", category);
   formData.append("image", image);
-  //image = document.getElementById("image").files[0];
-  //document.getElementById('form-photo-div').innerHTML=`<img src=${image}/>`
 
   fetch("http://localhost:5678/api/works", {
     method: "POST",
@@ -213,30 +211,12 @@ function addNewWork(event) {
     .then(work => {
       //Créer et ajoute les travaux dans la galerie//
       console.log(work)
-      //const figure = createWorkFigure(work);//
       const gallery = document.querySelector('.gallery');
-      //gallery.appendChild(figure);//
 
       //Créer et ajoute les travaux dans la modale//
       const figureModal = createModalWorkFigure(work);
       const galleryModal = document.querySelector('.gallery-modal');
       galleryModal.appendChild(figureModal);
-
-      //alert('Le nouvel travail a été ajouté avec succès.');//
-    //  const imagesContainer = document.querySelector('.gallery');
-
-    //imagesContainer.innerHTML=''
-        // const figure = document.createElement('figure');
-        // const figureCaption = document.createElement('figcaption');
-        // const figureImage = document.createElement('img');
-        // figureImage.src = work.imageUrl;
-        // figureImage.alt = work.title;
-        // figureCaption.innerHTML = work.title;
-        // //figure.className = work.category.name;
-        // figure.setAttribute('data-id', work.id);
-        // imagesContainer.appendChild(figure);
-        // figure.appendChild(figureImage);
-        // figure.appendChild(figureCaption);
       hideModal()
       location.reload()
     })
