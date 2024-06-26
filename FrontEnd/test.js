@@ -46,6 +46,11 @@ fetch('http://localhost:5678/api/works')
                     });
                 });
 
+                 // Vérifier si l'utilisateur est connecté et masquer les filtres si c'est le cas  
+                if (JSON.parse(sessionStorage.getItem("isConnected"))) {
+                     document.querySelector('.filter').style.display = 'none';
+                }
+
             });
 
     });

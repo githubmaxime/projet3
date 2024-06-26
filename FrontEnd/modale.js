@@ -122,31 +122,6 @@ function deleteWorkById(workId) {
   }
 }
 
-//Suppression de toute la galerie//
-
-function deleteGallery() {
-  const token = sessionStorage.getItem("Token");
-  const galleryWorks = document.querySelectorAll('.gallery-modal figure, .gallery figure');
-  galleryWorks.forEach((galleryWork) => {
-    const workId = galleryWork.getAttribute('data-id');
-    fetch(`http://localhost:5678/api/works/${workId}`, {
-      method: 'DELETE',
-      headers: {
-        "Accept": 'application/json',
-        "Authorization": `Bearer ${token}`
-      }
-    });
-    galleryWork.remove();
-  });
-}
-
-document.getElementById("delete-gallery").addEventListener("click", function () {
-  const confirmation = confirm("Êtes-vous sûr de vouloir supprimer la galerie ?");
-  if (confirmation) {
-    deleteGallery();
-  }
-});
-
 //Formulaire rempli//
 
 const titleInput = document.getElementById('modal-photo-title');
