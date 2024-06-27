@@ -24,7 +24,7 @@ fetch('http://localhost:5678/api/works')
         fetch('http://localhost:5678/api/categories')
             .then(response => response.json())
             .then(categories => {
-                let node = '<h2>Mes Projets</h2> <div class="filter"><button id="all">Tous</button>';
+                let node = '<div class="filter"><button id="all">Tous</button>';
                 for (let i = 0; i < categories.length; i++) {
                     node += `<button class="category" data-id=${categories[i].id}>${categories[i].name}</button>`;
                 };

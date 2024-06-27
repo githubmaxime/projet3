@@ -128,6 +128,12 @@ li:hover {
 	margin-bottom: 1em;
 }
 
+#portfolio-l-modify {
+	display: flex ;
+	margin-bottom: 5em;
+	margin-top: 5em;
+}
+
 /*filtre*/
 .filtre{
 	display: flex;
